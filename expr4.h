@@ -13,6 +13,10 @@
 #include <sys/sem.h>
 #include <unistd.h>
 #include <fcntl.h>
+#include <sys/stat.h>
+#include <pwd.h>
+#include <grp.h>
+#include <time.h>
 
 void handleFiles(struct stat * file, char * name, long long maxSize);
 void traversalCurDir(char * dirName);

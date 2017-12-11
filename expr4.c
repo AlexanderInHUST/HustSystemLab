@@ -2,10 +2,6 @@
 // Created by 唐艺峰 on 2017/12/11.
 //
 
-#include <sys/stat.h>
-#include <pwd.h>
-#include <grp.h>
-#include <time.h>
 #include "expr4.h"
 
 void traversalCurDir(char *dirName) {
