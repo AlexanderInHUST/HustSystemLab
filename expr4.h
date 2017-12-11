@@ -14,15 +14,13 @@
 #include <unistd.h>
 #include <fcntl.h>
 
-struct DirMem {
-    char ** dirs;
-    char ** files;
-    int dirNum;
-    int fileNum;
-};
-
-void handleFiles(char * fileName, char * address);
-int traversalCurDir(char * dirName);
-void handleDirs(char * address, int fileNum);
+void handleFiles(struct stat * file, char * name, long long maxSize);
+void traversalCurDir(char * dirName);
+void handleDirs(char *address, long fileSize);
+void handleFileKind(int fileMode);
+void handleFilePermission(int fileMode);
+void handleFileUser(uid_t st_uid);
+void handleFileSize(off_t st_size, off_t maxSize);
+void handleDate(struct timespec birth);
 
 #endif //COMPUTERSYSTEMLAB_EXPR4_H
